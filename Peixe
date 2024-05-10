@@ -30,7 +30,7 @@ class Vertebrados extends Animal {
 
 public class Main {
     public static void main(String[] args) {
-        Vertebrados peixe = new Vertebrados("Dourado", 2, "peixe do mar");
+        Vertebrados peixe = new Vertebrados("Dourado", 4, "peixe do mar");
         System.out.println("Nome: " + peixe.nome);
         System.out.println("Idade: " + peixe.idade);
         System.out.println("Alimento: " + peixe.getAlimento());
