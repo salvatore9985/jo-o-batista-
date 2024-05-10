@@ -1,0 +1,41 @@
+class Animal {
+    String nome;
+    int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public void emitirSom() {
+    }
+}
+
+class Vertebrados extends Animal {
+    String alimento;
+
+    public Vertebrados(String nome, int idade, String alimento) {
+        super(nome, idade);
+        this.alimento = alimento;
+    }
+
+    public String getAlimento() {
+        return alimento;
+    }
+
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vertebrados peixe = new Vertebrados("Dourado", 2, "peixe do mar");
+        System.out.println("Nome: " + peixe.nome);
+        System.out.println("Idade: " + peixe.idade);
+        System.out.println("Alimento: " + peixe.getAlimento());
+
+        peixe.setAlimento("plâncton");
+        System.out.println("Novo alimento: " + peixe.getAlimento());
+    }
+}
