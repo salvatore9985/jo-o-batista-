@@ -1,0 +1,39 @@
+class Animal {
+    String nome;
+    int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public void emitirSom() {
+    }
+}
+
+class Mamifero extends Animal {
+    String alimento;
+
+    public Mamifero(String nome, int idade, String alimento) {
+        super(nome, idade);
+        this.alimento = alimento;
+    }
+    public String getAlimento() {
+        return alimento;
+    }
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Mamifero mamifero = new Mamifero("Leão", 5, "carne");
+        System.out.println("Nome: " + mamifero.nome);
+        System.out.println("Idade: " + mamifero.idade);
+        System.out.println("Alimento: " + mamifero.getAlimento());
+
+        mamifero.setAlimento("coelho");
+        System.out.println("Novo alimento: " + mamifero.getAlimento());
+    }
+}
